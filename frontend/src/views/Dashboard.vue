@@ -141,7 +141,7 @@ onMounted(async () => {
   const saved = localStorage.getItem("dashboard")
   if (saved) { try { widgets.value = JSON.parse(saved) } catch { widgets.value = [] } }
   try {
-    const res = await axios.get("http://localhost:5000/orders")
+    const res = await axios.get("https://sample-dashboard-challenge.onrender.com/orders")
     allOrders.value = res.data
   } catch (e) { console.error("Failed to fetch orders:", e) }
 })

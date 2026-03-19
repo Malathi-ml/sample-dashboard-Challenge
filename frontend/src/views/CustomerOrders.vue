@@ -323,7 +323,7 @@ const errors = ref({})
 async function fetchOrders() {
   loading.value = true
   try {
-    const res = await axios.get("http://localhost:5000/orders")
+    const res = await axios.get("https://sample-dashboard-challenge.onrender.com/orders")
     orders.value = res.data
   } catch {
     toast("Failed to load orders", "error")
@@ -389,10 +389,10 @@ async function submitOrder() {
   try {
     const payload = { ...form.value, total: form.value.quantity * form.value.price }
     if (editingOrderId.value) {
-      await axios.put(`http://localhost:5000/orders/${editingOrderId.value}`, payload)
+      await axios.put(`https://sample-dashboard-challenge.onrender.com/orders/${editingOrderId.value}`, payload)
       toast("Order updated successfully!", "success")
     } else {
-      await axios.post("http://localhost:5000/orders", payload)
+      await axios.post("https://sample-dashboard-challenge.onrender.com/orders", payload)
       toast("Order created successfully!", "success")
     }
     await fetchOrders()
@@ -412,7 +412,7 @@ function cancelDelete()        { orderToDelete.value = null;  showDeleteConfirm.
 async function executeDelete() {
   submitting.value = true
   try {
-    await axios.delete(`http://localhost:5000/orders/${orderToDelete.value._id}`)
+    await axios.delete(`https://sample-dashboard-challenge.onrender.com/orders/${orderToDelete.value._id}`)
     toast(`Order for ${orderToDelete.value.firstName} deleted`, "success")
     await fetchOrders()
     refreshOrders()

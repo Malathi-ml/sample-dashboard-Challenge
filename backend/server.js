@@ -89,5 +89,5 @@ app.delete("/orders/:id", async (req, res) => {
 
 /* ✅ START SERVER */
 app.listen(5000, () => {
-  console.log("Server running on http://localhost:5000")
+  console.log("Server running on https://sample-dashboard-challenge.onrender.com")
 })

@@ -72,7 +72,7 @@ cd backend
 npm install
 node server.js
 ```
-Backend runs on `http://localhost:5000`
+Backend runs on `https://sample-dashboard-challenge.onrender.com`
 
 ### 3. Seed sample data (optional)
 ```bash

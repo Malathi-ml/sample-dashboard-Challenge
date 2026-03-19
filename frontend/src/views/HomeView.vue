@@ -208,7 +208,7 @@ const liveStats = ref([
 ])
 async function fetchStats() {
   try {
-    const res = await axios.get("http://localhost:5000/orders")
+    const res = await axios.get("https://sample-dashboard-challenge.onrender.com/orders")
     const o = res.data
     liveStats.value[0].value = o.length
     liveStats.value[1].value = o.filter(x => x.status === "Pending").length
