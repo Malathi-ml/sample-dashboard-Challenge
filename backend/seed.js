@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-mongoose.connect("mongodb://127.0.0.1:27017/ordersDB")
+mongoose.connect("mongodb+srv://malathimadhu643_db_user:g8oYaFg9akjttYIn@cluster0.9h51dm1.mongodb.net/ordersDB?appName=Cluster0")
   .then(() => console.log("MongoDB Connected"))
   .catch(err => { console.log(err); process.exit(1) })
 
