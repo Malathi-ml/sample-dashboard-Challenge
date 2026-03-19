@@ -8,7 +8,7 @@ app.use(cors())
 app.use(express.json())
 
 /* ✅ CONNECT MONGODB */
-mongoose.connect("mongodb+srv://malathimadhu643_db_user:g8oYaFg9akjttYIn@cluster0.9h51dm1.mongodb.net/ordersDB?appName=Cluster0")
+mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://malathimadhu643_db_user:g8oYaFg9akjttYIn@cluster0.9h51dm1.mongodb.net/ordersDB?appName=Cluster0")
   .then(() => console.log("MongoDB Connected"))
   .catch(err => console.log(err))
 
