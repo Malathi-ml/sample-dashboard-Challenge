@@ -1,5 +1,17 @@
 # HalleyX Dashboard
 
+## 🚀 Live Demo
+👉 **Live Site:** https://sample-dashboard-challenge.vercel.app
+
+## 🔑 Demo Login
+- **Email:** admin@halleyx.com
+- **Password:** admin123
+
+## 📂 GitHub Repository
+👉 https://github.com/Malathi-ml/sample-dashboard-Challenge
+
+---
+
 A full-stack **Customer Order Management & Analytics Platform** built with Vue 3, Node.js, Express, and MongoDB.
 
 ---
@@ -13,6 +25,9 @@ A full-stack **Customer Order Management & Analytics Platform** built with Vue 3
 - **Date Range Filtering** — Filter all data by Today, Last 7 / 30 / 90 days or All time
 - **Responsive Design** — Works on Desktop (12-col), Tablet (8-col), and Mobile (4-col)
 - **Widget Settings Panel** — Per-widget configuration for axes, colors, columns, filters, pagination
+- **Login & Auth** — Secure login with route protection
+- **Export CSV** — Download all orders as CSV file
+- **Toast Notifications** — Success and error messages on all actions
 
 ---
 
@@ -40,6 +55,7 @@ halleyx-dashboard-project/
 │   │   │   ├── Dashboard.vue
 │   │   │   ├── DashboardConfig.vue
 │   │   │   ├── CustomerOrders.vue
+│   │   │   ├── LoginView.vue
 │   │   │   └── NotFound.vue
 │   │   ├── components/
 │   │   │   └── Layout.vue
@@ -62,8 +78,8 @@ halleyx-dashboard-project/
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/halleyx-dashboard.git
-cd halleyx-dashboard
+git clone https://github.com/Malathi-ml/sample-dashboard-Challenge.git
+cd sample-dashboard-Challenge
 ```
 
 ### 2. Setup Backend
@@ -72,7 +88,7 @@ cd backend
 npm install
 node server.js
 ```
-Backend runs on `https://sample-dashboard-challenge.onrender.com`
+Backend runs on `http://localhost:5000`
 
 ### 3. Seed sample data (optional)
 ```bash
@@ -106,6 +122,7 @@ Frontend runs on `http://localhost:5173`
 | Route               | Page                    |
 |---------------------|-------------------------|
 | `/`                 | Home page               |
+| `/login`            | Login page              |
 | `/dashboard`        | Live dashboard          |
 | `/dashboard-config` | Dashboard builder       |
 | `/orders`           | Customer orders         |
